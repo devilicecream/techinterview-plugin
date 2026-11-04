@@ -1,12 +1,12 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.dawalter-autoagency/techinterview",
+  "name": "io.github.devilicecream/techinterview",
   "title": "TechInterview.live",
   "description": "Design coding & system design interview questions, build challenges, and launch live interviews.",
   "version": "1.0.0",
   "websiteUrl": "https://techinterview.live",
   "repository": {
-    "url": "https://github.com/dawalter-autoagency/techinterview-plugin",
+    "url": "https://github.com/devilicecream/techinterview-plugin",
     "source": "github"
   },
   "remotes": [

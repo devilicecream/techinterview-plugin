@@ -33,7 +33,7 @@ Then authenticate with `codex mcp login techinterview`.
 
 #### Option A — Install Full Plugin (MCP Server + `grill-interview-architect` Skill)
 ```bash
-/plugin marketplace add dawalter-autoagency/techinterview-plugin
+/plugin marketplace add devilicecream/techinterview-plugin
 /plugin install techinterview-live@techinterview-marketplace
 ```
 
@@ -66,7 +66,7 @@ Then run `/mcp` inside Claude Code to complete the browser OAuth 2.1 login.
 ### 5. Gemini CLI
 Install directly as a Gemini CLI Extension (includes both the `techinterview` MCP server and `GEMINI.md` Interview Architect instructions):
 ```bash
-gemini extensions install https://github.com/dawalter-autoagency/techinterview-plugin
+gemini extensions install https://github.com/devilicecream/techinterview-plugin
 ```
 
 ---
