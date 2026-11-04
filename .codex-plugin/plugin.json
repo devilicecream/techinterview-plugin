@@ -1,7 +1,42 @@
 {
   "name": "techinterview-live",
   "version": "1.0.0",
-  "description": "Design high-signal coding & system design interview questions, build multi-question challenges, and launch live interview sessions on techinterview.live.",
+  "description": "Coding & system design interview architect.",
+  "author": {
+    "name": "Walter Galante",
+    "email": "walter@techinterview.live",
+    "url": "https://techinterview.live"
+  },
+  "homepage": "https://techinterview.live",
+  "repository": "https://github.com/devilicecream/techinterview-plugin",
+  "license": "MIT",
+  "keywords": [
+    "interview",
+    "hiring",
+    "engineering-manager",
+    "system-design",
+    "excalidraw",
+    "coding-interview",
+    "mcp"
+  ],
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "techinterview.live",
+    "shortDescription": "Coding & system design interview architect.",
+    "longDescription": "Design high-signal coding (Monaco) and system design (Mermaid to Excalidraw) interview questions, assemble multi-question challenges for free, and launch live candidate interview sessions on techinterview.live.",
+    "developerName": "Walter Galante",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://techinterview.live",
+    "privacyPolicyURL": "https://techinterview.live/privacy",
+    "termsOfServiceURL": "https://techinterview.live/terms",
+    "defaultPrompt": [
+      "Design a senior backend system design interview question",
+      "Create a multi-question coding and architecture challenge",
+      "Start a live interview session from my challenge library"
+    ],
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
 }
