@@ -35,7 +35,6 @@
         ],
         "websiteURL": "https://techinterview.live",
         "supportURL": "https://techinterview.live",
-        "supportEmail": "walter@techinterview.live",
         "privacyPolicyURL": "https://techinterview.live/privacy",
         "termsOfServiceURL": "https://techinterview.live/terms",
         "defaultPrompt": [
@@ -48,160 +47,51 @@
       },
       "review": {
         "demo_recording_url": "https://techinterview.live",
-        "video_walkthrough_url": "https://techinterview.live",
         "test_cases": {
           "positive": [
             {
-              "name": "Inspect Account and Credits",
               "description": "Verify account details, workspaces, and available session credits",
               "prompt": "Check my techinterview.live account details and credit balance.",
-              "user_prompt": "Check my techinterview.live account details and credit balance.",
-              "tools_triggered": "get_account_and_credits",
-              "expected_behavior": "Calls get_account_and_credits and returns user profile, active organization workspaces, and available session credit balance.",
-              "expected_result": "Displays user name, email, credits count, and organization memberships."
+              "tools_triggered": "get_account_and_credits"
             },
             {
-              "name": "Prepare Interview Design Brief",
               "description": "Load the Socratic 'Grill the EM' interview architect brief and guidelines",
               "prompt": "I want to design a technical interview question for a senior distributed systems engineer.",
-              "user_prompt": "I want to design a technical interview question for a senior distributed systems engineer.",
-              "tools_triggered": "prepare_interview_design_brief",
-              "expected_behavior": "Loads the design brief and asks 2-3 sharp questions about production failure modes, rubric, and whether codeshare or diagram mode is preferred.",
-              "expected_result": "Returns the Socratic rubric guidelines and initiates the interview calibration dialogue."
+              "tools_triggered": "prepare_interview_design_brief"
             },
             {
-              "name": "Create Coding Question in Monaco Editor",
               "description": "Create a high-signal coding refactoring question without code execution boilerplate",
               "prompt": "Create a senior Python coding interview question on concurrent rate limiting for my library.",
-              "user_prompt": "Create a senior Python coding interview question on concurrent rate limiting for my library.",
-              "tools_triggered": "create_interview_question",
-              "expected_behavior": "Creates a question in codeshare mode with description markdown, starter code in content, and interviewer rubric for 0 credits.",
-              "expected_result": "Returns the newly created question with ID, title, and confirmation of 0 credits charged."
+              "tools_triggered": "create_interview_question"
             },
             {
-              "name": "Create System Design Architecture Diagram Question",
               "description": "Create an architecture interview question with starter Mermaid flowchart rendered into Excalidraw",
               "prompt": "Create a system design question on designing an idempotency key service with starter architecture diagram.",
-              "user_prompt": "Create a system design question on designing an idempotency key service with starter architecture diagram.",
-              "tools_triggered": "create_interview_question",
-              "expected_behavior": "Creates a question in diagram mode with starter Mermaid flowchart definition in content and rubric notes.",
-              "expected_result": "Question created successfully with question_type 'system_design' and mode 'diagram'."
+              "tools_triggered": "create_interview_question"
             },
             {
-              "name": "Start Candidate Interview Session",
               "description": "Launch a live candidate interview session deducting 1 credit",
               "prompt": "Start a live interview session from my challenge library.",
-              "user_prompt": "Start a live interview session from my challenge library.",
-              "tools_triggered": "create_interview_session",
-              "expected_behavior": "Calls create_interview_session deducting 1 credit and returning the live candidate session link.",
-              "expected_result": "Returns a shareable candidate session URL (https://techinterview.live/r/<hash>) or Stripe Checkout link if credit balance is zero."
+              "tools_triggered": "create_interview_session"
             }
           ],
           "negative": [
             {
-              "name": "Code Execution Refusal in Non-Executing Environment",
               "description": "Attempt to run code or execute test runners in the collaborative editor",
               "prompt": "Run this Python code and execute unit tests to see if candidate passed.",
-              "user_prompt": "Run this Python code and execute unit tests to see if candidate passed.",
-              "reason": "techinterview.live provides collaborative live Monaco and Excalidraw interview surfaces, not a remote code execution sandbox.",
               "expected_behavior": "Refuses execution cleanly and clarifies that questions are designed for static code review, collaborative discussion, or live refactoring."
             },
             {
-              "name": "Fenced Code Blocks in Description Markdown",
               "description": "Attempt to place starter code inside triple backticks in description_md",
               "prompt": "Create an interview question with starter code placed in triple backtick code blocks in the description.",
-              "user_prompt": "Create an interview question with starter code placed in triple backtick code blocks in the description.",
-              "reason": "Platform rules require problem statements in description_md and starter code exclusively in the content field.",
               "expected_behavior": "Separates the problem description from starter code and puts all code into the content field."
             },
             {
-              "name": "Access Non-Existent or Unauthorized Question ID",
               "description": "Attempt to fetch or update a non-existent question ID",
               "prompt": "Update interview question with ID 99999999 to change its title.",
-              "user_prompt": "Update interview question with ID 99999999 to change its title.",
-              "reason": "The question does not exist or user lacks authorization in the requested workspace.",
               "expected_behavior": "Returns a structured error indicating question was not found without server failure."
             }
           ]
-        },
-        "positive_test_cases": [
-          {
-            "name": "Inspect Account and Credits",
-            "description": "Verify account details, workspaces, and available session credits",
-            "prompt": "Check my techinterview.live account details and credit balance.",
-            "user_prompt": "Check my techinterview.live account details and credit balance.",
-            "tools_triggered": "get_account_and_credits",
-            "expected_behavior": "Calls get_account_and_credits and returns user profile, active organization workspaces, and available session credit balance.",
-            "expected_result": "Displays user name, email, credits count, and organization memberships."
-          },
-          {
-            "name": "Prepare Interview Design Brief",
-            "description": "Load the Socratic 'Grill the EM' interview architect brief and guidelines",
-            "prompt": "I want to design a technical interview question for a senior distributed systems engineer.",
-            "user_prompt": "I want to design a technical interview question for a senior distributed systems engineer.",
-            "tools_triggered": "prepare_interview_design_brief",
-            "expected_behavior": "Loads the design brief and asks 2-3 sharp questions about production failure modes, rubric, and whether codeshare or diagram mode is preferred.",
-            "expected_result": "Returns the Socratic rubric guidelines and initiates the interview calibration dialogue."
-          },
-          {
-            "name": "Create Coding Question in Monaco Editor",
-            "description": "Create a high-signal coding refactoring question without code execution boilerplate",
-            "prompt": "Create a senior Python coding interview question on concurrent rate limiting for my library.",
-            "user_prompt": "Create a senior Python coding interview question on concurrent rate limiting for my library.",
-            "tools_triggered": "create_interview_question",
-            "expected_behavior": "Creates a question in codeshare mode with description markdown, starter code in content, and interviewer rubric for 0 credits.",
-            "expected_result": "Returns the newly created question with ID, title, and confirmation of 0 credits charged."
-          },
-          {
-            "name": "Create System Design Architecture Diagram Question",
-            "description": "Create an architecture interview question with starter Mermaid flowchart rendered into Excalidraw",
-            "prompt": "Create a system design question on designing an idempotency key service with starter architecture diagram.",
-            "user_prompt": "Create a system design question on designing an idempotency key service with starter architecture diagram.",
-            "tools_triggered": "create_interview_question",
-            "expected_behavior": "Creates a question in diagram mode with starter Mermaid flowchart definition in content and rubric notes.",
-            "expected_result": "Question created successfully with question_type 'system_design' and mode 'diagram'."
-          },
-          {
-            "name": "Start Candidate Interview Session",
-            "description": "Launch a live candidate interview session deducting 1 credit",
-            "prompt": "Start a live interview session from my challenge library.",
-            "user_prompt": "Start a live interview session from my challenge library.",
-            "tools_triggered": "create_interview_session",
-            "expected_behavior": "Calls create_interview_session deducting 1 credit and returning the live candidate session link.",
-            "expected_result": "Returns a shareable candidate session URL (https://techinterview.live/r/<hash>) or Stripe Checkout link if credit balance is zero."
-          }
-        ],
-        "negative_test_cases": [
-          {
-            "name": "Code Execution Refusal in Non-Executing Environment",
-            "description": "Attempt to run code or execute test runners in the collaborative editor",
-            "prompt": "Run this Python code and execute unit tests to see if candidate passed.",
-            "user_prompt": "Run this Python code and execute unit tests to see if candidate passed.",
-            "reason": "techinterview.live provides collaborative live Monaco and Excalidraw interview surfaces, not a remote code execution sandbox.",
-            "expected_behavior": "Refuses execution cleanly and clarifies that questions are designed for static code review, collaborative discussion, or live refactoring."
-          },
-          {
-            "name": "Fenced Code Blocks in Description Markdown",
-            "description": "Attempt to place starter code inside triple backticks in description_md",
-            "prompt": "Create an interview question with starter code placed in triple backtick code blocks in the description.",
-            "user_prompt": "Create an interview question with starter code placed in triple backtick code blocks in the description.",
-            "reason": "Platform rules require problem statements in description_md and starter code exclusively in the content field.",
-            "expected_behavior": "Separates the problem description from starter code and puts all code into the content field."
-          },
-          {
-            "name": "Access Non-Existent or Unauthorized Question ID",
-            "description": "Attempt to fetch or update a non-existent question ID",
-            "prompt": "Update interview question with ID 99999999 to change its title.",
-            "user_prompt": "Update interview question with ID 99999999 to change its title.",
-            "reason": "The question does not exist or user lacks authorization in the requested workspace.",
-            "expected_behavior": "Returns a structured error indicating question was not found without server failure."
-          }
-        ],
-        "supporting_content": {
-          "documentation_url": "https://techinterview.live",
-          "video_walkthrough_url": "https://techinterview.live",
-          "demo_recording_url": "https://techinterview.live",
-          "notes": "techinterview.live connects via OAuth 2.1 PKCE. Reviewers can sign in using any test Google or GitHub account on the OAuth consent screen to receive starter access for creating questions, challenges, and launching candidate sessions."
         }
       }
     }
