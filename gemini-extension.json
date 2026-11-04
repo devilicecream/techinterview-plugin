@@ -1,0 +1,11 @@
+{
+  "name": "techinterview-plugin",
+  "version": "1.0.0",
+  "description": "Design high-signal coding & system design interview questions, build multi-question challenges, and launch live interview sessions on techinterview.live.",
+  "mcpServers": {
+    "techinterview": {
+      "httpUrl": "https://api.techinterview.live/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

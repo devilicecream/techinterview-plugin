@@ -1,6 +1,6 @@
 # TechInterview.live — Official MCP Plugin (`techinterview-plugin`)
 
-Connect **OpenAI Codex**, **ChatGPT**, **Claude**, and **Claude Code** to your [techinterview.live](https://techinterview.live) account via OAuth 2.1 PKCE.
+Connect **OpenAI Codex**, **ChatGPT**, **Claude**, **Claude Code**, and **Gemini CLI** to your [techinterview.live](https://techinterview.live) account via OAuth 2.1 PKCE.
 
 Designed for Engineering Managers, Hiring Managers, and Tech Leads to:
 - **Grill the EM (`grill-interview-architect` Skill)**: Socratic 2–3 turn discovery that turns real production failure modes into calibrated `Junior`, `Mid`, or `Senior` coding and system design challenges—never generic LeetCode trivia.
@@ -60,6 +60,14 @@ Then run `/mcp` inside Claude Code to complete the browser OAuth 2.1 login.
    - **Name**: `TechInterview.live`
    - **MCP Server URL**: `https://api.techinterview.live/mcp`
    - **Authentication**: `OAuth` (auto-discovered via `https://api.techinterview.live/.well-known/oauth-protected-resource`).
+
+---
+
+### 5. Gemini CLI
+Install directly as a Gemini CLI Extension (includes both the `techinterview` MCP server and `GEMINI.md` Interview Architect instructions):
+```bash
+gemini extensions install https://github.com/dawalter-autoagency/techinterview-plugin
+```
 
 ---
 
