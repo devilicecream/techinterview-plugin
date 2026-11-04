@@ -52,27 +52,32 @@
             {
               "description": "Verify account details, workspaces, and available session credits",
               "prompt": "Check my techinterview.live account details and credit balance.",
-              "tools_triggered": "get_account_and_credits"
+              "tools_triggered": "get_account_and_credits",
+              "expected_behavior": "Displays the connected user profile (name and email), active organization workspaces, and available session credit balance (1 credit = 1 live interview session, question/challenge creation is free)."
             },
             {
               "description": "Load the Socratic 'Grill the EM' interview architect brief and guidelines",
               "prompt": "I want to design a technical interview question for a senior distributed systems engineer.",
-              "tools_triggered": "prepare_interview_design_brief"
+              "tools_triggered": "prepare_interview_design_brief",
+              "expected_behavior": "Returns the Socratic 'Grill the EM' rubric guidelines, explains platform constraints (collaborative Monaco/Excalidraw non-executing environment), and asks calibration questions focusing on high-signal production failure modes."
             },
             {
               "description": "Create a high-signal coding refactoring question without code execution boilerplate",
               "prompt": "Create a senior Python coding interview question on concurrent rate limiting for my library.",
-              "tools_triggered": "create_interview_question"
+              "tools_triggered": "create_interview_question",
+              "expected_behavior": "Creates a codeshare question for 0 credits with problem statement in description markdown, starter Python code in content, and interviewer rubric notes, returning the question ID, title, and confirmation."
             },
             {
               "description": "Create an architecture interview question with starter Mermaid flowchart rendered into Excalidraw",
               "prompt": "Create a system design question on designing an idempotency key service with starter architecture diagram.",
-              "tools_triggered": "create_interview_question"
+              "tools_triggered": "create_interview_question",
+              "expected_behavior": "Creates a system design diagram question for 0 credits with architectural scope and starter Mermaid flowchart definition in content that renders into Excalidraw, returning the question ID and confirmation."
             },
             {
               "description": "Launch a live candidate interview session deducting 1 credit",
               "prompt": "Start a live interview session from my challenge library.",
-              "tools_triggered": "create_interview_session"
+              "tools_triggered": "create_interview_session",
+              "expected_behavior": "Deducts 1 session credit and returns a shareable candidate interview link (https://techinterview.live/r/<hash>) with join PIN, or a Stripe top-up checkout link if credit balance is zero."
             }
           ],
           "negative": [
