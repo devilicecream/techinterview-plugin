@@ -1,0 +1,20 @@
+{
+  "name": "techinterview-marketplace",
+  "interface": {
+    "displayName": "TechInterview.live Official Plugins"
+  },
+  "plugins": [
+    {
+      "name": "techinterview-live",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

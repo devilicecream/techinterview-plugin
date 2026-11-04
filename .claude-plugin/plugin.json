@@ -1,0 +1,23 @@
+{
+  "name": "techinterview-live",
+  "version": "1.0.0",
+  "description": "Design high-signal coding & system design interview questions, build multi-question challenges, and launch live interview sessions on techinterview.live.",
+  "author": {
+    "name": "TechInterview.live",
+    "email": "walter@techinterview.live",
+    "url": "https://techinterview.live"
+  },
+  "homepage": "https://techinterview.live",
+  "license": "MIT",
+  "keywords": [
+    "interview",
+    "hiring",
+    "engineering-manager",
+    "system-design",
+    "excalidraw",
+    "coding-interview",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

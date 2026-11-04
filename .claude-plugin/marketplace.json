@@ -1,0 +1,29 @@
+{
+  "name": "techinterview-marketplace",
+  "owner": {
+    "name": "TechInterview.live",
+    "email": "walter@techinterview.live"
+  },
+  "plugins": [
+    {
+      "name": "techinterview-live",
+      "source": "./",
+      "description": "Design high-signal coding & system design interview questions, build multi-question challenges, and launch live interview sessions on techinterview.live.",
+      "version": "1.0.0",
+      "author": {
+        "name": "TechInterview.live",
+        "email": "walter@techinterview.live"
+      },
+      "homepage": "https://techinterview.live",
+      "category": "Productivity",
+      "keywords": [
+        "interview",
+        "hiring",
+        "engineering-manager",
+        "system-design",
+        "excalidraw",
+        "coding-interview"
+      ]
+    }
+  ]
+}
