@@ -1,7 +1,7 @@
 {
   "name": "techinterview-live",
   "version": "1.0.0",
-  "description": "Coding & system design interview architect.",
+  "description": "Technical interview architect",
   "author": {
     "name": "Walter Galante",
     "email": "walter@techinterview.live",
@@ -23,12 +23,15 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "techinterview.live",
-    "shortDescription": "Coding & system design interview architect.",
+    "shortDescription": "Technical interview architect",
+    "subtitle": "Technical interview architect",
     "longDescription": "Design high-signal coding (Monaco) and system design (Mermaid to Excalidraw) interview questions, assemble multi-question challenges for free, and launch live candidate interview sessions on techinterview.live.",
     "developerName": "Walter Galante",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
     "websiteURL": "https://techinterview.live",
+    "supportURL": "https://techinterview.live",
+    "supportEmail": "walter@techinterview.live",
     "privacyPolicyURL": "https://techinterview.live/privacy",
     "termsOfServiceURL": "https://techinterview.live/terms",
     "defaultPrompt": [
