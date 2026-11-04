@@ -149,9 +149,9 @@
   ],
   "supporting_content": {
     "documentation_url": "https://techinterview.live",
-    "video_walkthrough_url": "https://techinterview.live",
-    "demo_recording_url": "https://techinterview.live",
+    "video_walkthrough_url": "https://techinterview.clueso.site/share/asmtp3prl6r6a8r710z78poy",
+    "demo_recording_url": "https://techinterview.clueso.site/share/asmtp3prl6r6a8r710z78poy",
     "notes": "techinterview.live connects via OAuth 2.1 PKCE. Reviewers can sign in using any test Google or GitHub account on the OAuth consent screen to receive starter access for creating questions, challenges, and launching candidate sessions."
   },
-  "demo_recording_url": "https://techinterview.live"
+  "demo_recording_url": "https://techinterview.clueso.site/share/asmtp3prl6r6a8r710z78poy"
 }
