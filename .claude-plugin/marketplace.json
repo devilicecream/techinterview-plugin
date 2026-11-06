@@ -7,6 +7,7 @@
   "plugins": [
     {
       "name": "techinterview-live",
+      "displayName": "techinterview.live",
       "source": "./",
       "description": "Design high-signal coding & system design interview questions, build multi-question challenges, and launch live interview sessions on techinterview.live.",
       "version": "1.0.0",
