@@ -8,6 +8,9 @@
     "url": "https://techinterview.live"
   },
   "homepage": "https://techinterview.live",
+  "repository": "https://github.com/devilicecream/techinterview-plugin",
+  "privacyPolicyUrl": "https://techinterview.live/privacy",
+  "termsOfServiceUrl": "https://techinterview.live/terms",
   "license": "MIT",
   "keywords": [
     "interview",
