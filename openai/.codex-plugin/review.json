@@ -44,7 +44,7 @@
         "user_prompt": "Start a live interview session from my challenge library.",
         "tools_triggered": "create_interview_session",
         "expected_behavior": "Calls create_interview_session deducting 1 credit and returning the live candidate session link.",
-        "expected_result": "Returns a shareable candidate session URL (https://techinterview.live/r/<hash>) or Stripe Checkout link if credit balance is zero."
+        "expected_result": "Returns a shareable candidate session URL (https://techinterview.live/r/<hash>) or an INSUFFICIENT_CREDITS message (no purchase link) if the credit balance is zero."
       }
     ],
     "negative": [
@@ -118,7 +118,7 @@
       "user_prompt": "Start a live interview session from my challenge library.",
       "tools_triggered": "create_interview_session",
       "expected_behavior": "Calls create_interview_session deducting 1 credit and returning the live candidate session link.",
-      "expected_result": "Returns a shareable candidate session URL (https://techinterview.live/r/<hash>) or Stripe Checkout link if credit balance is zero."
+      "expected_result": "Returns a shareable candidate session URL (https://techinterview.live/r/<hash>) or an INSUFFICIENT_CREDITS message (no purchase link) if the credit balance is zero."
     }
   ],
   "negative_test_cases": [

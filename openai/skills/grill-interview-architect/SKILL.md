@@ -43,6 +43,7 @@ Every question created or updated MUST follow these platform rules:
 5. **HIGH-SIGNAL `interviewer_notes`**:
    - Always populate `interviewer_notes` with private Markdown notes for the interviewer: evaluation rubric, probing questions, green flags, and red flags.
 
-## 3. Credits & Pricing Rules
-- **Library Creation is FREE (`0 credits`)**: `create_interview_question`, `update_interview_question`, `create_challenge`, and `update_challenge` cost **0 credits**.
-- **Live Interview Sessions Cost `1 credit`**: `create_interview_session` deducts **1 credit** and returns a shareable candidate session URL (`https://techinterview.live/r/<hash>`). If the user has `0` credits, present the returned Stripe Checkout URL (`buy_credits_checkout_link`) so they can top up in one click.
+## 3. Credits
+- **1 credit = 1 live interview session.** Starting a live session with `create_interview_session` uses one credit.
+- **Creating questions and challenges is free** (0 credits): `create_interview_question`, `update_interview_question`, `create_challenge`, and `update_challenge`.
+- **If the user is out of credits**, tell them and point them to their techinterview.live account. Do not offer payment links or help with purchasing.

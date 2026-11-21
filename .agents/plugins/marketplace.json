@@ -8,7 +8,7 @@
       "name": "techinterview-live",
       "source": {
         "source": "local",
-        "path": "."
+        "path": "./openai"
       },
       "policy": {
         "installation": "AVAILABLE",
