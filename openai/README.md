@@ -56,3 +56,13 @@ Then authenticate with `codex mcp login techinterview`.
 - **Privacy Policy**: [https://techinterview.live/privacy](https://techinterview.live/privacy)
 - **Terms of Service**: [https://techinterview.live/terms](https://techinterview.live/terms)
 - **Support**: [walter@techinterview.live](mailto:walter@techinterview.live)
+
+## Building the directory submission ZIP
+
+The OpenAI plugin directory takes a flat ZIP in the portable format. Review data (test cases, demo video, commerce declaration, release notes) lives in `plugin.json` under `extensions.com.openai`. From this folder:
+
+```bash
+zip -X ../techinterview-live-openai.zip plugin.json mcp.json skills/grill-interview-architect/SKILL.md assets/logo.png
+```
+
+Reviewer demo credentials go in the dashboard's Review details, never in the ZIP.

@@ -77,7 +77,7 @@
               "description": "Launch a live candidate interview session deducting 1 credit",
               "prompt": "Start a live interview session from my challenge library.",
               "tools_triggered": "create_interview_session",
-              "expected_behavior": "Deducts 1 session credit and returns a shareable candidate interview link (https://techinterview.live/r/<hash>) with join PIN, or an INSUFFICIENT_CREDITS message (no purchase link) if the credit balance is zero."
+              "expected_behavior": "Deducts 1 session credit and returns a shareable candidate interview link (https://techinterview.live/r/<hash>) with join PIN, or an INSUFFICIENT_CREDITS message pointing to the techinterview.live dashboard if the credit balance is zero."
             }
           ],
           "negative": [
@@ -97,7 +97,12 @@
               "expected_behavior": "Returns a structured error indicating question was not found without server failure."
             }
           ]
-        }
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Simplified the account tool to show your credit balance only, and published an updated privacy policy that covers every tool's inputs and outputs."
       }
     }
   }
