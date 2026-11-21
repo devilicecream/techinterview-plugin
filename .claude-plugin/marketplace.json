@@ -7,8 +7,7 @@
   "plugins": [
     {
       "name": "techinterview-live",
-      "displayName": "techinterview.live",
-      "source": "./",
+      "source": "./claude",
       "description": "Design high-signal coding & system design interview questions, build multi-question challenges, and launch live interview sessions on techinterview.live.",
       "version": "1.0.0",
       "author": {
@@ -17,8 +16,6 @@
       },
       "homepage": "https://techinterview.live",
       "repository": "https://github.com/devilicecream/techinterview-plugin",
-      "privacyPolicyUrl": "https://techinterview.live/privacy",
-      "termsOfServiceUrl": "https://techinterview.live/terms",
       "category": "Productivity",
       "keywords": [
         "interview",
