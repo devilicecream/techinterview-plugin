@@ -1,5 +1,6 @@
 {
   "name": "techinterview-marketplace",
+  "description": "Official techinterview.live plugin for Claude Code: design interview questions and challenges and launch live interview sessions.",
   "owner": {
     "name": "TechInterview.live",
     "email": "walter@techinterview.live"
