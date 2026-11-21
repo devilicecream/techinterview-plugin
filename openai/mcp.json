@@ -3,7 +3,17 @@
   "mcpServers": {
     "techinterview": {
       "type": "streamable-http",
-      "url": "https://api.techinterview.live/mcp"
+      "url": "https://api.techinterview.live/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            }
+          }
+        }
+      }
     }
   }
 }
